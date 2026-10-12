@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Blog Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        .load {
+            width: 100px;
+            height: 100px;
+            margin: 110px auto 0;
+            border:solid 10px #8822aa;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            -webkit-transition: all 0.5s ease-in;
+            -webkit-animation-name:             rotate;
+            -webkit-animation-duration:         1.0s;
+            -webkit-animation-iteration-count:  infinite;
+            -webkit-animation-timing-function: linear;
+                
+            transition: all 0.5s ease-in;
+            animation-name:             rotate;
+            animation-duration:         1.0s;
+            animation-iteration-count:  infinite;
+            animation-timing-function: linear;
+        }
+    </style>
+
+
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+        <!-- Navbar -->
+        <nav class="bg-blue-600 p-4 text-white flex justify-between">
+            <div>
+                <h1 class="text-3xl font-bold">AI Blog Generator</h1>
+            </div>
+            <div>
+                <a><a href="#" class="text-white hover:underline">Logout</a></a>
+            </div>
+        </nav>
+
+
+        <br>
+        <br>
+
+        <!-- Main -->
+        <div class="flex-growcontainer mx-auto mt-10 px-4 sm:px-0">
+            <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shawdow-md transition-transform transform hover:scale-105 flex flex-col">
+
+                <!-- Introduction section -->
+                <div class="text-center">
+                    <h2 class="text-2xl font-semibold mb-4">Welcome to the AI Blog Generator</h2>
+                    <p class="text-gray-700">
+                        Generate engaging blog posts with the help of artificial intelligence.
+                    </p>
+                </div>
+
+                <br>
+
+                <!-- Youtube section -->
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4">Enter Youtueb Video Link</h2>
+                    <div class="flex space-x-4">
+                        <input id="youtubeLink" type="url" placeholder="Paste YouTube Link Here..." class="flex-grow p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button id="generateBlogButton" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"> Generate
+                    </div>
+                </div>
+
+                <!-- section for Loading circle -->
+
+                <div style="display: none;" id="loading-circle" class="load"></div>
+
+                <!-- Generated Blog Display section -->
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 mt-10">Generated Blog Article</h2>
+                    <div id="blogContent" class="bg-gray-100 p-4 rounded-lg min-h-[200px]">
+                        <p class="text-gray-700">Your generated blog article will appear here...</p>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <footer class="textpcenter p-4 text-blacl mt-10">
+            Powered by <a href="https://openai.com" class="text-blue-600 hover:underline">OpenAI</a>
+            
+        </footer>
+
+        <script>
+
+        </script>
+
+</body>
+</html>

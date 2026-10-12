@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+ENV/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Django runtime data
+*.sqlite3
+*.log
+media/
+staticfiles/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+build/
+
+# Editors
+.vscode/
+.idea/
+
+# Separate project stored beside this app
+/backend/django-netflix-clone/
